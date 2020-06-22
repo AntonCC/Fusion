@@ -1,0 +1,30 @@
+.landing {
+  .container {
+    background: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.7)) ,url('../../imgs/landing.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 500px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
+    a {
+      text-decoration: none;
+      padding: .5rem 2.5rem;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+  }
+}
