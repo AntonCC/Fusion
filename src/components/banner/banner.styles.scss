@@ -1,0 +1,28 @@
+.banner {
+  margin-top: 5rem;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    height: 400px;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    .left {
+      grid-column: 1/2;
+      background: url('../../imgs/woman-laptop.jpg');
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    .right {
+      grid-column: 2/4;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        margin-bottom: 1rem;
+      }
+      h2 {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

@@ -5,6 +5,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .logo {
+      h1 {
+        background: linear-gradient(to right, #3a6186, #89253e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
     ul {
       list-style: none;
       display: flex;
