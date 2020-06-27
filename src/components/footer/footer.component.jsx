@@ -6,8 +6,8 @@ const Footer = () => {
   const [formValue, setFormValue] = useState({email: null})
 
   const handleChange = (e) => {
-    const {value} = e.target
-    setFormValue({formValue: value})
+    const { value } = e.target
+    setFormValue({ formValue: value })
   }
 
   const handleSubmit = (e) => {

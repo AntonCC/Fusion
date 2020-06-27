@@ -10,11 +10,14 @@ const Header = () => {
           <div className="logo">
             <h1>Fusion</h1>
           </div>
-          <ul>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/">About</NavLink></li>
-            <li><NavLink to="/">Contact</NavLink></li>
-          </ul>
+          <nav>
+            <ul>
+              <li><NavLink to="/">Home</NavLink></li>
+              <li><NavLink to="/">About</NavLink></li>
+              <li><NavLink to="/">Contact</NavLink></li>
+            </ul>
+            <NavLink className="btn-buy" to="/">Buy Now</NavLink>
+          </nav>
         </div>
       </header>
     </>

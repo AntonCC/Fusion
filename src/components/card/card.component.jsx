@@ -9,6 +9,7 @@ const Card = (props) => {
         <h1>{props.title}</h1>
         <h3>{props.subTitle}</h3>
         <p>{props.body}</p>
+        <i class={props.icon} style={{ color: props.iconColor }}></i>
       </div>
     </>
   )
