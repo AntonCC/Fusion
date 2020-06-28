@@ -36,5 +36,26 @@ header {
         border: 1px solid #111;
       }
     }
+    .hamburger {
+      visibility: hidden;
+      position: absolute;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    .container {
+      nav {
+        visibility: hidden;
+        position: absolute;
+      }
+      .hamburger {
+        padding-top: 15px;
+        position: relative;
+        visibility: visible;
+        cursor: pointer;
+      }
+    }
   }
 }

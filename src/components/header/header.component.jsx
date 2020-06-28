@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './header.styles.scss'
+import Hamburger from '../hamburger/hamburger.component'
 
 const Header = () => {
+  const [inProp, setInProp] = useState(true)
+
   return (
     <>
       <header>
@@ -13,11 +16,12 @@ const Header = () => {
           <nav>
             <ul>
               <li><NavLink to="/">Home</NavLink></li>
-              <li><NavLink to="/">About</NavLink></li>
+              <li><NavLink to="/about">About</NavLink></li>
               <li><NavLink to="/">Contact</NavLink></li>
             </ul>
             <NavLink className="btn-buy" to="/">Buy Now</NavLink>
           </nav>
+          <Hamburger className="hamburger" onClick={() => setInProp(!inProp)} />
         </div>
       </header>
     </>
