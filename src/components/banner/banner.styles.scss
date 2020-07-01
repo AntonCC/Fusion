@@ -3,20 +3,22 @@
   .container {
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-areas: "sideA sideB sideB";
     min-height: 400px;
     box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-    .left {
-      grid-column: 1/2;
-      background: url('../../imgs/woman-laptop.jpg');
-      background-size: cover;
-      background-position: 50% 50%;
+    &.switch {
+      grid-template-areas: "sideB sideB sideA";
     }
-    .right {
-      grid-column: 2/4;
+    .side-a {
+      grid-area: sideA;
+    }
+    .side-b {
+      grid-area: sideB;
       padding: 3rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       h1 {
         margin-bottom: 1rem;
       }
@@ -32,10 +34,13 @@
     .container {
       grid-template-columns: auto;
       grid-template-rows: repeat(2, minmax(200px, 1fr));
-      .left {
+      grid-template-areas: 
+        "sideA"
+        "sideB";
+      .side-a {
         grid-column: 1/4;
       }
-      .right {
+      .side-b {
         grid-column: 1/4;
       }
     }

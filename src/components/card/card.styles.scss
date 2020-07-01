@@ -1,7 +1,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 4rem;
   box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
   h1 {
@@ -13,5 +13,8 @@
   p {
     margin-bottom: 1rem;
     align-self: center;
+  }
+  i {
+    margin-top: auto;
   }
 }

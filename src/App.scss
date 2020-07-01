@@ -1,8 +1,13 @@
+* {
+  font-family: 'Fira Sans', sans-serif;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
+  background: #fff;
 }
 
 ul {
@@ -11,4 +16,10 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+p {
+  line-height: 1.6;
+  letter-spacing: .75px;
+  opacity: .8;
 }
