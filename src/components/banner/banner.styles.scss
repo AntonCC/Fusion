@@ -37,6 +37,11 @@
       grid-template-areas: 
         "sideA"
         "sideB";
+        &.switch {
+          grid-template-areas: 
+            "sideA"
+            "sideB";
+        }
       .side-a {
         grid-column: 1/4;
       }
