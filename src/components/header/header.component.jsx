@@ -17,9 +17,9 @@ const Header = () => {
             <ul>
               <li><NavLink to="/">Home</NavLink></li>
               <li><NavLink to="/about">About</NavLink></li>
-              <li><NavLink to="/">Contact</NavLink></li>
+              <li><NavLink to="/contact">Contact</NavLink></li>
             </ul>
-            <NavLink className="btn-buy" to="/">Buy Now</NavLink>
+            <NavLink className="btn-buy" to="/buy">Buy Now</NavLink>
           </nav>
           <Hamburger className="hamburger" onClick={() => setInProp(!inProp)} />
         </div>
