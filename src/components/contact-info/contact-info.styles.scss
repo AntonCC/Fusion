@@ -8,9 +8,13 @@
     align-items: center;
 
     .sideA {
+      box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+      height: 100%;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      // align-items: center;
       p {
         margin-bottom: 2rem;
       }
