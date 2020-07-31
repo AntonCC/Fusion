@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route } from 'react-router-dom'
 import './App.scss';
+import Sidebar from './components/sidebar/sidebar.component'
+import Backdrop from './components/backdrop/backdrop.component'
 import Header from './components/header/header.component'
 import Footer from './components/footer/footer.component'
 import Home from './pages/home/home.component'
@@ -15,14 +17,29 @@ const routes = [
   {path: '/buy', name: "Buy Now", component: Buy}
 ]
 
-function App() {
+const App = () => {
+  const [sidebar, setSidebar] = useState(false)
+
+  const handleSidebar = () => {
+    setSidebar(!sidebar)
+  }
+
+  let openBackdrop;
+  if(sidebar) {
+    openBackdrop = <Backdrop handleSidebar={handleSidebar}/>
+  }
+
   return (
     <div className="App">
-      <Header />
-      {routes.map(({ path, component }) => (
-        <Route exact path={path} component={component}/>
-      ))}
-      <Footer />
+      <Sidebar open={sidebar} handleSidebar={handleSidebar}/>
+      {openBackdrop}
+      <div className={`App-inner ${sidebar ? 'blur' : ''}`}>
+        <Header handleSidebar={handleSidebar}/>
+        {routes.map(({ path, component }) => (
+          <Route exact path={path} component={component}/>
+        ))}
+        <Footer />
+      </div>
     </div>
   );
 }

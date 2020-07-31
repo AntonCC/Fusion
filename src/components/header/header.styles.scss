@@ -27,22 +27,9 @@ header {
             text-decoration: none;
             color: #111;
             position: relative;
-            &:after {
-              content: '';
-              position: absolute;
-              right: 0;
-              bottom: 0;
-              margin-top: 5px;
-              height: 2px;
-              width: 0;
-              background-color: #222;
-              transition: 300ms ease;
-            }
             &:hover {
-              &:after {
-                left: 0;
-                width: 100%;
-              }
+              text-decoration: underline;
+              opacity: .7;
             }
           }
         }
@@ -52,9 +39,12 @@ header {
         padding: .5rem 2.5rem;
         color: #111;
         border: 1px solid #111;
+        &:hover {
+          opacity: .7;
+        }
       }
     }
-    .hamburger {
+    .hamburger-container {
       visibility: hidden;
       position: absolute;
     }
@@ -68,11 +58,13 @@ header {
         visibility: hidden;
         position: absolute;
       }
-      .hamburger {
-        padding-top: 15px;
+      .hamburger-container {
         position: relative;
         visibility: visible;
-        cursor: pointer;
+        .hamburger {
+          padding-top: 15px;
+          cursor: pointer;
+        }
       }
     }
   }

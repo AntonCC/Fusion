@@ -8,7 +8,7 @@ const HomeLanding = () => {
       <div className="container">
         <h1>Laptop Conveinence. Desktop Performance.</h1>
         <h3>Count On Fusion Laptops For Your Project's Needs</h3>
-        <NavLink to="/">Buy Now</NavLink>
+        <NavLink to="/buy">Buy Now</NavLink>
       </div>
     </div>
   )

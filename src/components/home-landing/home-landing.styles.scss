@@ -28,3 +28,20 @@
     }
   }
 }
+
+// Media query 650
+@media only screen and (max-width: 650px) {
+  .home-landing {
+    .container {
+      h1 {
+        font-size: 1.75rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+      a {
+
+      }
+    }
+  }
+}

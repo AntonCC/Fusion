@@ -12,8 +12,9 @@ const Footer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("Email submitted: " + formValue.email);
+    // console.log("Email submitted: " + formValue.email);
   }
+
 
  return (
     <div className="footer">

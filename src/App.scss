@@ -2,6 +2,16 @@
   font-family: 'Fira Sans', sans-serif;
 }
 
+.App {
+  .App-inner {
+    width: 100%;
+    height: 100%;
+    &.blur {
+      filter: blur(2px);
+    }
+  }
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
