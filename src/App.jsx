@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 import './App.scss';
 import Sidebar from './components/sidebar/sidebar.component'
 import Backdrop from './components/backdrop/backdrop.component'
@@ -35,9 +36,11 @@ const App = () => {
       {openBackdrop}
       <div className={`App-inner ${sidebar ? 'blur' : ''}`}>
         <Header handleSidebar={handleSidebar}/>
-        {routes.map(({ path, component }) => (
-          <Route exact path={path} component={component}/>
-        ))}
+        <Switch >
+          {routes.map(({ path, component }) => (
+            <Route exact path={path} component={component}/>
+          ))}
+        </Switch>
         <Footer />
       </div>
     </div>
