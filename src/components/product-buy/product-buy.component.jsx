@@ -2,31 +2,32 @@ import React from 'react'
 import './product-buy.styles.scss'
 import ProductLaptop from '../../imgs/product-laptop.png'
 
-const ProductBuy = () => {
+const ProductBuy = (props) => {
+  const { name, crossPrice, activePrice, savings, processor, os, graphics, ram, screen, weight} = props
   return (
     <div className="product-buy">
       <div className="product-img">
         <img src={ProductLaptop} alt="Laptop"/>
       </div>
-      <h3>Fusion 14 5000 Laptop</h3>
+      <h3>{ name }</h3>
       <div className="price">
-        <div className="cross-out">$500</div>
-        <div className="active">$425</div>
+        <div className="cross-out">{ crossPrice }</div>
+        <div className="active">{ activePrice }</div>
       </div>
       <ul>
-        <li>Intel Pentium Gold Processor 5405U</li>
-        <li>Windows 10 Home Edition</li>
-        <li>Intel UHD Graphics 610</li>
-        <li>8GB DDR4, 2666 MHZ</li>
+        <li>{ processor }</li>
+        <li>{ os }</li>
+        <li>{ graphics }</li>
+        <li>{ ram }</li>
       </ul>
       <div className="size-weight">
         <div className="display">
           <i className="fas fa-laptop fa-2xl"></i>
-          <span>14-in screen</span>
+          <span>{screen}-in screen</span>
         </div>
         <div className="weight">
           <i className="fas fa-balance-scale"></i>
-          <span>Starts at 3lbs</span>
+          <span>Starts at { weight }lbs</span>
         </div>
       </div>
       <div className="questions-number">
@@ -35,11 +36,11 @@ const ProductBuy = () => {
       <div className="purchase">
         <div className="value-line">
           <span>Est. Value</span>
-          <span>$500</span>
+          <span>{ crossPrice }</span>
         </div>
         <div className="value-line">
           <div className="blue">Total Savings</div>
-          <span>$75</span>
+          <span>{ savings }</span>
         </div>
         <div className="value-line">
           <span>Ground Delivery</span>
@@ -47,7 +48,7 @@ const ProductBuy = () => {
         </div>
         <div className="value-line">
           <span>Fusion Price</span>
-          <span><strong>$425</strong></span>
+          <span><strong>{ activePrice}</strong></span>
         </div>
         <button className="purchase-btn">Buy</button>
       </div>

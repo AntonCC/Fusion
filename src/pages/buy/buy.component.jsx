@@ -1,6 +1,7 @@
 import React from 'react'
 import './buy.styles.scss'
 import { motion } from 'framer-motion'
+import { products } from './products'
 import ProductBuy from '../../components/product-buy/product-buy.component'
 import ProductBanner from '../../components/product-banner/product-banner.component'
 
@@ -15,9 +16,9 @@ const Buy = () => {
         <ProductBanner />
       </div>
       <div className="product-container">
-        <ProductBuy />
-        <ProductBuy />
-        <ProductBuy />
+        {products.map(product => (
+          <ProductBuy {...product} />
+        ))}
       </div>
     </motion.div>
   )
