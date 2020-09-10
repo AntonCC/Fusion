@@ -7,8 +7,8 @@ export const cardInfoTop = [
 ]
 
 export const cardInfoBottom = [
-  {id: 1, title: "Card One", body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem eligendi recusandae fuga, fugiat sunt nulla nam, labore iusto ipsum voluptate sapiente illum ipsa saepe, quos esse quo odio numquam animi.e"},
-  {id: 2, title: "Card Two", body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem eligendi recusandae fuga, fugiat sunt nulla nam, labore iusto ipsum voluptate sapiente illum ipsa saepe, quos esse quo odio numquam animi."}
+  {id: 1, title: "Environmental Stewardship", body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem eligendi recusandae fuga, fugiat sunt nulla nam, labore iusto ipsum voluptate sapiente illum ipsa saepe, quos esse quo odio numquam animi.e"},
+  {id: 2, title: "Afterschool Programs", body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem eligendi recusandae fuga, fugiat sunt nulla nam, labore iusto ipsum voluptate sapiente illum ipsa saepe, quos esse quo odio numquam animi."}
 ]
 
 

@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import './footer.styles.scss'
 import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   const [formValue, setFormValue] = useState({email: null})
+  const formRef = useRef(null)
 
   const handleChange = (e) => {
     const { value } = e.target
@@ -12,7 +13,9 @@ const Footer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // console.log("Email submitted: " + formValue.email);
+    alert('Thanks for signing up!')
+    setFormValue({ email: '' })
+    formRef.current.reset()
   }
 
 
@@ -30,7 +33,7 @@ const Footer = () => {
           </div>
           <div className="email">
             <h3>Sign Up For Our NewLetter:</h3>
-            <form action="#" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} ref={formRef}>
               <input type="email" name="email" placeholder="Enter Email" onChange={handleChange} required/>
               <button type="submit">Submit</button>
             </form>
@@ -40,8 +43,8 @@ const Footer = () => {
           <h3>Company Info</h3>
           <ul>
             <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/">About</NavLink></li>
-            <li><NavLink to="/">Contact</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/contact">Contact</NavLink></li>
             <li><NavLink to="/">Privacy Policy</NavLink></li>
             <li><NavLink to="/">Term Of Service</NavLink></li>
           </ul>

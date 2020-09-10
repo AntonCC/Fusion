@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
 import './App.scss';
+import ScrollTop from './components/scroll-top/scroll-top.component'
 import Sidebar from './components/sidebar/sidebar.component'
 import Backdrop from './components/backdrop/backdrop.component'
 import Header from './components/header/header.component'
@@ -32,6 +32,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <ScrollTop />
       <Sidebar open={sidebar} handleSidebar={handleSidebar}/>
       {openBackdrop}
       <div className={`App-inner ${sidebar ? 'blur' : ''}`}>

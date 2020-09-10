@@ -50,7 +50,7 @@ const ProductBuy = (props) => {
           <span>Fusion Price</span>
           <span><strong>{ activePrice}</strong></span>
         </div>
-        <button className="purchase-btn">Buy</button>
+        <button className="purchase-btn" onClick={() => alert('Thank you for your purchase!')}>Buy</button>
       </div>
     </div>
   )

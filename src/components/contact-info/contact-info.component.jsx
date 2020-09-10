@@ -18,8 +18,8 @@ Leaflet.Icon.Default.mergeOptions({
 
 const ContactInfo = () => {
   const [viewport, setViewport] = useState({
-    lat: 51.505,
-    lng: -0.09,
+    lat: 40.72,
+    lng: -73.95,
     zoom: 13
   })
 
@@ -41,7 +41,7 @@ const ContactInfo = () => {
             />
             <Marker position={[viewport.lat, viewport.lng]}>
               <Popup>
-                A pretty CSS popup
+                1245 Seadrive View, Brooklyn NY
               </Popup>                          
             </Marker>
           </Map>
